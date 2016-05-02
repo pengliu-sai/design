@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LoginForm</title>
+    <link href="/static/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/resources/custom/css/sigin.css" rel="stylesheet">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="container">
+
+    <form class="form-signin" action="/login">
+        <h2 class="form-signin-heading">请登陆</h2>
+        <label for="inputUserName" class="sr-only">用户名</label>
+        <input type="text" id="inputUserName" name="username" class="form-control" placeholder="用户名" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="密码" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> 记住我
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
+    </form>
+
+</div> <!-- /container -->
+<script src="/static/resources/jquery/jquery-2.2.3.min.js"></script>
+<script src="/static/resources/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

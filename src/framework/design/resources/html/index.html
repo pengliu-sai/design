@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/static/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/resources/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="/static/resources/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <!--<link href="/static/resources/jQuery-File-Upload/css/style.css" rel="stylesheet">-->
+    <!--<link href="/static/resources/jQuery-File-Upload/css/blueimp-gallery.min.css" rel="stylesheet">-->
+    <link href="/static/resources/jQuery-File-Upload/css/jquery.fileupload.css" rel="stylesheet">
+    <!--<link href="/static/resources/jQuery-File-Upload/css/jquery.fileupload-ui.css" rel="stylesheet">-->
+    <!--<link href="/static/resources/jQuery-File-Upload/css/jquery.fileupload-noscript.css" rel="stylesheet">-->
+    <!--<link href="/static/resources/jQuery-File-Upload/css/jquery.fileupload-ui-noscript.css" rel="stylesheet">-->
+
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>配置表清单</h1>
+
+        <!-- The fileinput-button span is used to style the file input field as button -->
+        <span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>上传配置表</span>
+        <!-- The file input field used as target for the file upload widget -->
+        <input id="fileupload" type="file" name="files[]" multiple>
+        </span>
+        <br>
+        <br>
+        <!-- The global progress bar -->
+        <div id="progress" class="progress">
+            <div class="progress-bar progress-bar-success"></div>
+        </div>
+        <!-- The container for the uploaded files -->
+        <div id="files" class="files"></div>
+        <br>
+
+
+        <br>
+
+        <div id="toolbar">
+            <button id="remove" class="btn btn-danger" disabled>
+                <i class="glyphicon glyphicon-remove"></i> 删除
+            </button>
+        </div>
+        <table id="table"
+               data-toggle="table"
+               data-show-toggle="true"
+               data-show-columns="true"
+               data-pagination="true"
+               data-search="true"
+               data-click-to-select="true"
+               data-id-field="id"
+               data-show-pagination-switch="true"
+               data-show-refresh="true"
+               data-height="460"
+               data-page-list="[10, 25, 50, 100, ALL]">
+            <thead>
+                <tr>
+                    <!--<th data-field="state" data-checkbox="true"></th>-->
+                    <th data-field="id" data-checkbox="true">id</th>
+                    <th data-field="chinese-name" data-editable="true">中文名</th>
+                    <th data-field="table-name">表名</th>
+                    <th data-field="auth">署名</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>商店表</td>
+                    <td>shop</td>
+                    <td>作者1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者9</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者11</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者12</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者13</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>卡牌表</td>
+                    <td>card</td>
+                    <td>作者14</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/static/resources/jquery/jquery-2.2.3.min.js"></script>
+    <script src="/static/resources/jQuery-File-Upload/js/jquery.ui.widget.js"></script>
+    <script src="/static/resources/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+    <script src="/static/resources/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+    <script src="/static/resources/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+    <script src="/static/resources/jQuery-File-Upload/js/jquery.fileupload-validate.js"></script>
+
+
+    <script src="/static/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/resources/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="/static/resources/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="/static/resources/bootstrap-table/bootstrap-table-editable.js"></script>
+    <script src="/static/resources/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+
+    <script src="/static/resources/jQuery-File-Upload/js/main.js"></script>
+
+</body>
+</html>
